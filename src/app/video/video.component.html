@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidebar -->
+  <mat-sidenav #sidenav mode="side" opened="true" class="sidenav" role="navigation">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+
+  <!-- Hauptinhalt -->
+  <div class="content">
+    <main>
+      <article id="intro">
+        <section aria-labelledby="was-ist-wcag">
+          <h1 id="was-ist-wcag" tabindex="1">Was ist WCAG?</h1>
+          <p>Die Web Content Accessibility Guidelines (WCAG) sind eine Sammlung von Richtlinien, die sicherstellen, dass Webinhalte für alle Menschen zugänglich sind, einschließlich Menschen mit Behinderungen.</p>
+        </section>
+
+        <section aria-labelledby="wcag-kriterien">
+          <h2 id="wcag-kriterien" tabindex="2">WCAG Kriterien</h2>
+          <p>Die WCAG beinhalten vier grundlegende Prinzipien, die für die Barrierefreiheit entscheidend sind:</p>
+          <ul>
+            <li><strong>Wahrnehmbarkeit (Perceivable):</strong> Inhalte müssen so präsentiert werden, dass sie von allen Benutzern wahrgenommen werden können.</li>
+            <li><strong>Bedienbarkeit (Operable):</strong> Benutzer müssen in der Lage sein, die Benutzeroberfläche zu bedienen und zu navigieren.</li>
+            <li><strong>Verständlichkeit (Understandable):</strong> Inhalte müssen für den Benutzer verständlich sein.</li>
+            <li><strong>Robustheit (Robust):</strong> Inhalte müssen so gestaltet sein, dass sie in verschiedenen Kontexten und mit unterschiedlichen Technologien zugänglich sind.</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="wcag-aaa">
+          <h2 id="wcag-aaa" tabindex="3">WCAG AAA-Kriterien</h2>
+          <p>Die höchsten Anforderungen an Barrierefreiheit fallen unter die **AAA-Kriterien**. Einige Beispiele hierfür sind:</p>
+          <ul>
+            <li>Die Verwendung von klarer und einfacher Sprache.</li>
+            <li>Bereitstellung von Inhalten in mehreren Formaten, wie Textalternativen zu Grafiken oder Videos.</li>
+            <li>Unterstützung für Benutzer, die nur mit der Tastatur navigieren.</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="barrierefreie-inhalte">
+          <h2 id="barrierefreie-inhalte" tabindex="4">Barrierefreie Inhalte erstellen</h2>
+          <p>Um sicherzustellen, dass Ihre Website barrierefrei ist, sollten Sie die folgenden Prinzipien berücksichtigen:</p>
+          <ul>
+            <li>Verwenden Sie semantisches HTML (z. B. <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>) zur Verbesserung der Zugänglichkeit.</li>
+            <li>Stellen Sie sicher, dass alle interaktiven Elemente (z. B. Links, Buttons) auch mit der Tastatur zugänglich sind.</li>
+            <li>Verwenden Sie ausreichende Kontraste zwischen Text und Hintergrund, um auch für Benutzer mit Farbsehschwächen lesbar zu bleiben.</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+  </div>
+</mat-sidenav-container>

@@ -1,0 +1,44 @@
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #0d47a1;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+.clickable-area {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+
+  &:hover {
+    background-color: #ffeb3b;
+    color: black;
+  }
+
+  &:focus {
+    outline: 3px solid yellow;
+    background-color: #ffeb3b;
+    color: black;
+  }
+}
+
+mat-icon {
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
