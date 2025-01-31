@@ -13,6 +13,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import {TextToSpeechComponent} from "./text-to-speech/text-to-speech.component";
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
+import { SourcesComponent } from './sources/sources.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {MatMenuModule} from "@angular/material/menu";
     VideoComponent,
     HomeComponent,
     SidenavComponent,
-    TextToSpeechComponent
+    TextToSpeechComponent,
+    SourcesComponent
   ],
   imports: [
     BrowserModule,

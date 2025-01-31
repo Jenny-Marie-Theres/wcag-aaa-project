@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidebar -->
+  <mat-sidenav #sidenav mode="side" opened="true" class="sidenav" role="navigation">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <!-- Hauptinhalt -->
+  <div class="content">
+    <main>
+      <article id="intro">
+        <section aria-labelledby="Quellen-und-Technologien">
+          <h1 id="Quellen-und-Technologien" tabindex="1">Quellen und Technologien</h1>
+          <p>Diese Seite beleuchtet die Technologien, die bei der Entwicklung dieser Webseite verwendet wurden, sowie die Quellen, aus denen die verwendeten Informationen stammen.</p>
+        </section>
+
+        <section aria-labelledby="Technologien">
+          <h2 id="Technologien" tabindex="0">Technologien</h2>
+          <p>Die Webseite wurde unter Verwendung des Angular-Frameworks entwickelt. Um die Benutzeroberfläche ansprechend und funktional zu gestalten, wurde Angular Material eingesetzt, ein UI-Komponenten-Toolkit, das vorgefertigte Elemente zur Verfügung stellt. Für die Implementierung der Text-to-Speech-Funktionalität wurde eine Kombination aus Angular und einer Text-to-Speech-API verwendet, die es ermöglicht, Text in gesprochene Sprache umzuwandeln und damit die Zugänglichkeit der Webseite für Menschen mit unterschiedlichen Bedürfnissen zu verbessern.</p>
+        </section>
+
+        <section aria-labelledby="Quellen">
+          <h2 id="Quellen" tabindex="0">Quellen</h2>
+          <p></p>
+          <ul>
+            <li><a href="https://angular.io" target="_blank">Angular - Offizielle Website</a></li>
+            <li><a href="https://material.angular.io" target="_blank">Angular Material - UI-Komponenten</a></li>
+            <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG 2.1 - Web Content Accessibility Guidelines</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Web Speech API - Speech Synthesis</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+  </div>
+</mat-sidenav-container>
