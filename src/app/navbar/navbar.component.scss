@@ -11,6 +11,7 @@
   font-weight: 700;
   font-size: 1.5rem;
   padding: 0 1rem;
+  justify-content: space-between; /* Platz zwischen den Elementen */
 }
 
 .clickable-area {
@@ -41,4 +42,21 @@ mat-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.tts-container {
+  margin-left: auto;
+}
+.tts-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.tts-label {
+  font-size: 1.5rem;
+  color: white;
+  margin-right: 10px;
 }

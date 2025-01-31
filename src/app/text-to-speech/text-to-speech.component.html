@@ -1,0 +1,48 @@
+<div class="tts-controls">
+  <button mat-icon-button
+          aria-label="Vorlesen starten"
+          (click)="play()"
+          [disabled]="ttsService.isSpeaking"
+          (keydown.enter)="play()"
+          (keydown.space)="play()"
+          tabindex="0">
+    <mat-icon>play_arrow</mat-icon>
+  </button>
+
+  <button mat-icon-button
+          aria-label="Vorlesen stoppen"
+          (click)="stop()"
+          (keydown.enter)="stop()"
+          (keydown.space)="stop()"
+          tabindex="0">
+    <mat-icon>stop</mat-icon>
+  </button>
+
+  <!-- Button für Sprechgeschwindigkeit ändern -->
+  <button mat-icon-button
+          aria-label="Sprechgeschwindigkeit ändern"
+          (click)="toggleSpeedMenu()"
+          (keydown)="onToggleSpeedMenuKeyDown($event)"
+          [attr.aria-expanded]="isSpeedMenuOpen ? 'true' : 'false'"
+          tabindex="0">
+    <mat-icon>speed</mat-icon>
+  </button>
+
+  <div *ngIf="isSpeedMenuOpen" class="speed-menu-dropdown" role="menu" aria-labelledby="speed-menu-label">
+    <button class="speed-option"  [ngClass]="{'selected-speed': selectedSpeed === 0.25}" (click)="setSpeed(0.25)" (keydown.enter)="setSpeed(0.25)" (keydown.space)="setSpeed(0.25)" tabindex="0">
+      0.25x
+    </button>
+    <button class="speed-option"  [ngClass]="{'selected-speed': selectedSpeed === 0.50}" (click)="setSpeed(0.5)" (keydown.enter)="setSpeed(0.5)" (keydown.space)="setSpeed(0.5)" tabindex="0">
+      0.5x
+    </button>
+    <button class="speed-option"  [ngClass]="{'selected-speed': selectedSpeed === 1}" (click)="setSpeed(1)" (keydown.enter)="setSpeed(1)" (keydown.space)="setSpeed(1)" tabindex="0">
+      1x
+    </button>
+    <button class="speed-option"  [ngClass]="{'selected-speed': selectedSpeed === 1.25}" (click)="setSpeed(1.5)" (keydown.enter)="setSpeed(1.5)" (keydown.space)="setSpeed(1.5)" tabindex="0">
+      1.5x
+    </button>
+    <button class="speed-option"  [ngClass]="{'selected-speed': selectedSpeed === 2}" (click)="setSpeed(2)" (keydown.enter)="setSpeed(2)" (keydown.space)="setSpeed(2)" tabindex="0">
+      2x
+    </button>
+  </div>
+</div>

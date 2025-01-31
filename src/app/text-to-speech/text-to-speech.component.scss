@@ -1,0 +1,77 @@
+.tts-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+button {
+  background: white;
+  color: #0d47a1;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: #ffeb3b;
+    color: black;
+  }
+
+  &:focus {
+    outline: 3px solid yellow;
+    background-color: #ffeb3b;
+    color: black;
+  }
+
+  &:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+  }
+
+
+}
+.speed-menu-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #007bff; /* Blau für besseren Kontrast */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  width: 120px;
+  border-radius: 8px;
+}
+
+.speed-option {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  color: #333;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.speed-option:hover, .speed-option:focus {
+  background-color: #ffeb3b;
+  color: black;
+  border-radius: 0;
+}
+
+.selected-speed {
+  background-color: #0d47a1;
+  color: white;
+  font-weight: bold;
+  border-radius: 0;
+}

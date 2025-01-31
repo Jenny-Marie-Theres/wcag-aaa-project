@@ -15,6 +15,7 @@ export class NavbarComponent {
   onKeyDown(event: KeyboardEvent) {
 
     if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
       this.navigateToHome();
     }
   }
