@@ -1,22 +1,26 @@
-<div class="video-container" role="application" aria-labelledby="videoTitle">
+<main>
+    <div class="video-container" role="application" aria-labelledby="videoTitle">
 
-<iframe
-  id="video1"
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/68h6bq1aYZo?enablejsapi=1"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>
+        <iframe
+        id="video1"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/68h6bq1aYZo?enablejsapi=1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        ></iframe>
 
-<div class="controls">
-    <button (click)="playVideo()" aria-label="Play video">
-        Play
-    </button>
-    
-    <button (click)="pauseVideo()" aria-label="Pause video">
-        Pause
-    </button>
+        <p id="videoTitle" class="sr-only">Web Accessibility Guidelines in About 7 Minutes</p>
+        <p id="videoDesc" class="sr-only">Web accessibility should be at the forefront of any choices about web design or development. Learn what you can do to make your clients' sites accessible to more people.</p>
+
+        <div class="controls">
+            <button (click)="playVideo()" aria-label="Play">
+                <span class="button-label">Play</span>
+            </button>
+
+            <button (click)="pauseVideo()" aria-label="Pause">
+                <span id="pause-button" class="button-label">Pause</span>
+            </button>
+        </div>
     </div>
-</div>
+</main>
