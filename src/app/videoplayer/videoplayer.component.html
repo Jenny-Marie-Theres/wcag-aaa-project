@@ -1,0 +1,34 @@
+<div class="video-container" role="application" aria-labelledby="videoTitle">
+    <iframe
+    #youtubePlayer
+    width="560"
+    height="315"
+    [src]="safeVideoUrl"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    aria-label="YouTube video Web Accessibility Guidelines"
+    aria-describedby="videoDesc"
+    ></iframe>
+
+    <p id="videoTitle" class="sr-only">Web Accessibility Guidelines in About 7 Minutes</p>
+    <p id="videoDesc" class="sr-only">Web accessibility should be at the forefront of any choices about web design or development. Learn what you can do to make your clients' sites accessible to more people.</p>
+
+    <!-- Custom Controls, not quite working yet-->
+    <div class="controls">
+    <button (click)="playVideo()" aria-label="Play video">
+        Play
+    </button>
+    <button (click)="pauseVideo()" aria-label="Pause video">
+        Pause
+    </button>
+    <button (click)="toggleCaptions()" aria-label="Toggle captions">
+        {{ captionsEnabled ? 'Hide Captions' : 'Show Captions' }}
+    </button>
+    </div>
+
+    <div aria-live="polite" class="sr-only">
+    {{ playerState }}
+    </div>
+</div>

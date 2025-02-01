@@ -14,6 +14,7 @@ import {TextToSpeechComponent} from "./text-to-speech/text-to-speech.component";
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
 import { SourcesComponent } from './sources/sources.component';
+import { VideoplayerComponent } from './videoplayer/videoplayer.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SourcesComponent } from './sources/sources.component';
     HomeComponent,
     SidenavComponent,
     TextToSpeechComponent,
-    SourcesComponent
+    SourcesComponent,
+    VideoplayerComponent
   ],
   imports: [
     BrowserModule,
