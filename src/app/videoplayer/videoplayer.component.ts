@@ -1,75 +1,51 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Component, AfterViewInit } from '@angular/core';
 
-declare var YT: any;
+declare var YT: any; 
 
 @Component({
   selector: 'app-videoplayer',
   templateUrl: './videoplayer.component.html',
   styleUrls: ['./videoplayer.component.scss']
 })
-export class VideoplayerComponent implements OnInit, AfterViewInit {
-  @ViewChild('youtubePlayer') youtubePlayer!: ElementRef; 
+export class VideoplayerComponent implements AfterViewInit {
   player: any; 
-  safeVideoUrl: SafeResourceUrl = ""; 
-  captionsEnabled = false; 
-  playerState = 'Paused'; 
-
-
-  videoUrl = 'https://www.youtube.com/embed/68h6bq1aYZo'; 
-
-  constructor(private sanitizer: DomSanitizer) {}
-
-  ngOnInit(): void {
-
-    this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);
-  }
+  captionsEnabled = true;
 
   ngAfterViewInit(): void {
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
 
-    this.player = new YT.Player(this.youtubePlayer.nativeElement, {
-      events: {
-        'onReady': this.onPlayerReady.bind(this),
-        'onStateChange': this.onPlayerStateChange.bind(this)
-      }
-    });
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+
+    if (firstScriptTag && firstScriptTag.parentNode) {
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    } else {
+      console.error('Could not find a script tag or its parent node.');
+    }
+
+    (window as any)['onYouTubeIframeAPIReady'] = () => this.initializePlayer();
   }
 
-
-  onPlayerReady(event: any): void {
-    console.log('Player is ready');
+  initializePlayer(): void {
+    this.player = new YT.Player('video1');
   }
 
-  onPlayerStateChange(event: any): void {
-    switch (event.data) {
-      case YT.PlayerState.PLAYING:
-        this.playerState = 'Playing';
-        break;
-      case YT.PlayerState.PAUSED:
-        this.playerState = 'Paused';
-        break;
-      case YT.PlayerState.ENDED:
-        this.playerState = 'Ended';
-        break;
+  pauseVideo(): void {
+    if (this.player) {
+      this.player.pauseVideo();
+      console.log('Video paused');
+    } else {
+      console.error('YouTube player is not ready yet.');
     }
   }
 
   playVideo(): void {
-    this.player.playVideo();
-    this.playerState = 'Playing';
-  }
-
-  pauseVideo(): void {
-    this.player.pauseVideo();
-    this.playerState = 'Paused';
-  }
-
-  toggleCaptions(): void {
-    this.captionsEnabled = !this.captionsEnabled;
-    if (this.captionsEnabled) {
-      this.player.setOption('captions', 'on', 0);
+    if (this.player) {
+      this.player.playVideo();
+      console.log('Video played');
     } else {
-      this.player.setOption('captions', 'off', 0);
+      console.error('YouTube player is not ready yet.');
     }
   }
+
 }
