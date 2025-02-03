@@ -15,6 +15,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
 import { SourcesComponent } from './sources/sources.component';
 import { VideoplayerComponent } from './videoplayer/videoplayer.component';
+import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { VideoplayerComponent } from './videoplayer/videoplayer.component';
     SidenavComponent,
     TextToSpeechComponent,
     SourcesComponent,
-    VideoplayerComponent
+    VideoplayerComponent,
+    ThemeSwitcherComponent
   ],
   imports: [
     BrowserModule,
