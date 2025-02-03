@@ -1,9 +1,13 @@
-<div class="menu">
-    <label for="theme-select">Choose a colorblind mode:</label>
-    <select id="theme-select" (change)="changeTheme($event)">
-      <option value="default">Default</option>
-      <option value="protanopia">Protanopia (Red-Blind)</option>
-      <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
-      <option value="tritanopia">Tritanopia (Blue-Blind)</option>
-    </select>
-  </div>
+<button mat-icon-button
+    [matMenuTriggerFor]="themeMenu"
+    aria-label="Sprechgeschwindigkeit ändern"
+    tabindex="0">
+  <mat-icon>remove_red_eye</mat-icon>
+</button>
+
+<mat-menu #themeMenu="matMenu" >
+  <button mat-menu-item (click)="changeTheme('default')"  class="custom-menu-item">Default</button>
+  <button mat-menu-item (click)="changeTheme('protanopia')" class="custom-menu-item">Protanopia (Red-Blind)</button>
+  <button mat-menu-item (click)="changeTheme('deuteranopia')" class="custom-menu-item">Deuteranopia (Green-Blind)</button>
+  <button mat-menu-item (click)="changeTheme('tritanopia')" class="custom-menu-item">Tritanopia (Blue-Blind)</button>
+</mat-menu>

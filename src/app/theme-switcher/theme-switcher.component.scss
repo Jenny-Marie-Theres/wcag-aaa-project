@@ -1,0 +1,22 @@
+button {
+    background: white;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  
+    &:hover {
+      background-color:  var(--highlight-color);
+      color: var(--text-color);
+    }
+  
+}
+
+
+.custom-menu-item:hover {
+    background-color: var(--highlight-color) !important;
+}
+  
