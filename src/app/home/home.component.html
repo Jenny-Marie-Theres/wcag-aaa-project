@@ -5,51 +5,76 @@
   <mat-sidenav #sidenav mode="side" opened="true" class="sidenav" role="navigation">
     <app-sidenav></app-sidenav>
   </mat-sidenav>
+
   <!-- Hauptinhalt -->
   <div class="content">
     <main>
       <article id="intro">
         <section aria-labelledby="Projektarbeit">
-          <h1 id="Projektarbeit" tabindex="1">Projektarbeit</h1>
-          <p>Diese Webseite wurde im Rahmen einer Projektarbeit zur barrierefreien Webentwicklung erstellt. Sie erfüllt die höchsten Anforderungen der Web Content Accessibility Guidelines (WCAG) und erreicht die AAA-Konformitätsstufe.</p>
-          <p>Die Webseite besteht aus drei Hauptbereichen: </p>
+          <h1 id="Projektarbeit" tabindex="1">
+            <!-- Überschrift bleibt gleich -->
+            Projektarbeit
+          </h1>
+
+          <p *ngIf="!simpleLanguage">Diese Webseite wurde im Rahmen einer Projektarbeit zur barrierefreien Webentwicklung erstellt. Sie erfüllt die höchsten Anforderungen der Web Content Accessibility Guidelines (WCAG) und erreicht die AAA-Konformitätsstufe.</p>
+          <p *ngIf="simpleLanguage">Diese Webseite ist Teil einer Projektarbeit. Sie wurde so gemacht, dass alle Menschen sie gut benutzen können.</p>
+
+          <p *ngIf="!simpleLanguage">Die Webseite besteht aus drei Hauptbereichen:</p>
+          <p *ngIf="simpleLanguage">Die Webseite hat drei Teile:</p>
+
           <ul>
-            <li>Die Startseite gibt eine Übersicht über die Funktionen und Merkmale der Webseite.</li>
-            <li>Die Seite "Informationen über WCAG" vermittelt grundlegendes Wissen über die WCAG-Richtlinien und illustriert diese mit Bildern und Videos.</li>
-            <li>Die Seite "Quellen und Technologien" dokumentiert die verwendeten Frameworks und Technologien sowie die Quellen, aus denen die präsentierten Informationen stammen.</li>
+            <li *ngIf="!simpleLanguage">Die Startseite gibt eine Übersicht über die Funktionen und Merkmale der Webseite.</li>
+            <li *ngIf="simpleLanguage">Die Startseite zeigt, was die Webseite kann.</li>
+            <li *ngIf="!simpleLanguage">Die Seite "Informationen über WCAG" vermittelt grundlegendes Wissen über die WCAG-Richtlinien und illustriert diese mit Bildern und Videos.</li>
+            <li *ngIf="simpleLanguage">Auf der Seite "Informationen über WCAG" wird erklärt, was die WCAG-Richtlinien sind.</li>
+            <li *ngIf="!simpleLanguage">Die Seite "Quellen und Technologien" dokumentiert die verwendeten Frameworks und Technologien sowie die Quellen, aus denen die präsentierten Informationen stammen.</li>
+            <li *ngIf="simpleLanguage">Auf der Seite "Quellen und Technologien" wird erklärt, welche Programme und Quellen verwendet wurden.</li>
           </ul>
         </section>
 
         <section aria-labelledby="bedienen">
           <h2 id="bedienen" tabindex="1">Bedienmöglichkeiten</h2>
-          <p>Die gesamte Webseite ist vollständig über die Tastatur navigierbar. Nutzer können mit der Tab-Taste zwischen interaktiven Elementen wechseln und mit der Enter- oder Leertaste Aktionen ausführen.</p>
-          <p>Zusätzlich ist die Webseite für eine uneingeschränkte Nutzung mit der Maus optimiert.</p>
+          <p *ngIf="!simpleLanguage">Die gesamte Webseite ist vollständig über die Tastatur navigierbar. Nutzer können mit der Tab-Taste zwischen interaktiven Elementen wechseln und mit der Enter- oder Leertaste Aktionen ausführen.</p>
+          <p *ngIf="simpleLanguage">Man kann die Webseite mit der Tastatur benutzen. Mit der Tab-Taste kann man durch die wichtigen Dinge auf der Seite gehen. Mit Enter oder der Leertaste kann man etwas auswählen.</p>
+
+          <p *ngIf="!simpleLanguage">Zusätzlich ist die Webseite für eine uneingeschränkte Nutzung mit der Maus optimiert.</p>
+          <p *ngIf="simpleLanguage">Die Webseite funktioniert auch mit der Maus.</p>
         </section>
 
         <section aria-labelledby="reader">
           <h2 id="reader" tabindex="1">Vorlesefunktion</h2>
-          <p>Die Webseite bietet eine integrierte Vorlesefunktion, die den gesamten Seiteninhalt akustisch wiedergibt. Nutzer können das Vorlesen individuell starten und stoppen sowie die <strong>Vorlesegeschwindigkeit</strong> anpassen.</p>
-          <p>Diese Funktion ist sowohl über die Tastatur als auch über die Maus vollständig bedienbar.</p>
+          <p *ngIf="!simpleLanguage">Die Webseite bietet eine integrierte Vorlesefunktion, die den gesamten Seiteninhalt akustisch wiedergibt. Nutzer können das Vorlesen individuell starten und stoppen sowie die Vorlesegeschwindigkeit anpassen.</p>
+          <p *ngIf="simpleLanguage">Die Webseite hat eine Vorlesefunktion. Sie kann die ganze Seite vorlesen. Man kann das Vorlesen starten und stoppen. Man kann auch die Geschwindigkeit ändern.</p>
+
+          <p *ngIf="!simpleLanguage">Diese Funktion ist sowohl über die Tastatur als auch über die Maus vollständig bedienbar.</p>
+          <p *ngIf="simpleLanguage">Die Vorlesefunktion kann mit der Tastatur und mit der Maus bedient werden.</p>
         </section>
 
         <section aria-labelledby="Leichte-Sprache">
           <h2 id="Leichte-Sprache" tabindex="0">Leichte Sprache</h2>
-          <p>Um die Verständlichkeit für alle Nutzer zu gewährleisten, kann der Inhalt der Webseite optional in Leichter Sprache angezeigt werden.</p>
+          <p *ngIf="!simpleLanguage">Um die Verständlichkeit für alle Nutzer zu gewährleisten, kann der Inhalt der Webseite optional in Leichter Sprache angezeigt werden.</p>
+          <p *ngIf="simpleLanguage">Wenn man möchte, kann man die Webseite in einfacher Sprache lesen.</p>
         </section>
 
         <section aria-labelledby="Design">
           <h2 id="Design" tabindex="0">Designprinzipien</h2>
-          <p>Bei der Gestaltung der Webseite wurde besonderer Wert auf Barrierefreiheit gelegt. Dies umfasst unter anderem:</p>
+          <p *ngIf="!simpleLanguage">Bei der Gestaltung der Webseite wurde besonderer Wert auf Barrierefreiheit gelegt. Dies umfasst unter anderem:</p>
+          <p *ngIf="simpleLanguage">Das Design der Webseite wurde so gemacht, dass sie gut zu benutzen ist. Zum Beispiel:</p>
+
           <ul>
-            <li>Ein hoher Farbkontrast, um die Lesbarkeit für Personen mit Sehbeeinträchtigungen zu verbessern.</li>
-            <li>Eine ausreichende Schriftgröße und optimierte Zeilenabstände zur besseren Lesbarkeit.</li>
-            <li>Ein klar strukturiertes Layout, das eine intuitive Navigation ermöglicht.</li>
+            <li *ngIf="!simpleLanguage">Ein hoher Farbkontrast, um die Lesbarkeit für Personen mit Sehbeeinträchtigungen zu verbessern.</li>
+            <li *ngIf="simpleLanguage">Die Farben wurden so gewählt, dass Menschen mit schlechterem Sehen die Seite gut lesen können.</li>
+            <li *ngIf="!simpleLanguage">Eine ausreichende Schriftgröße und optimierte Zeilenabstände zur besseren Lesbarkeit.</li>
+            <li *ngIf="simpleLanguage">Der Text ist groß genug und die Abstände sind so gewählt, dass man die Seite gut lesen kann.</li>
+            <li *ngIf="!simpleLanguage">Ein klar strukturiertes Layout, das eine intuitive Navigation ermöglicht.</li>
+            <li *ngIf="simpleLanguage">Das Design ist einfach, damit man sich gut zurechtfindet.</li>
           </ul>
         </section>
 
         <section aria-labelledby="Einbindung-von-Medien">
           <h2 id="Einbindung-von-Medien" tabindex="0">Einbindung von Medien</h2>
-          <p>Die Webseite integriert Bilder und Videos, um visuelle und auditive Inhalte für verschiedene Nutzergruppen zugänglich zu machen. Dabei wird darauf geachtet, dass sämtliche Medien barrierefrei sind, beispielsweise durch Alternativtexte und Untertitel.</p>
+          <p *ngIf="!simpleLanguage">Die Webseite integriert Bilder und Videos, um visuelle und auditive Inhalte für verschiedene Nutzergruppen zugänglich zu machen. Dabei wird darauf geachtet, dass sämtliche Medien barrierefrei sind, beispielsweise durch Alternativtexte und Untertitel.</p>
+          <p *ngIf="simpleLanguage">Die Webseite zeigt Bilder und Videos. Alle Bilder haben Texte, die erklären, was sie zeigen. Und Videos haben Untertitel.</p>
         </section>
       </article>
     </main>

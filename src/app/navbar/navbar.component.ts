@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
+import {LanguageToggleService} from "../language-toggle-service.service";
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +8,17 @@ import {Router} from "@angular/router";
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  constructor(private router: Router) {}
+  isSimpleLanguage: boolean = false;
+  constructor(private router: Router, private languageToggleService: LanguageToggleService) {}
+
 
   navigateToHome(): void {
     this.router.navigate(['']);
+  }
+
+  toggleSimpleLanguage() {
+    this.languageToggleService.toggleSimpleLanguage();
+    this.isSimpleLanguage = !this.isSimpleLanguage;
   }
   onKeyDown(event: KeyboardEvent) {
 
@@ -19,4 +27,11 @@ export class NavbarComponent {
       this.navigateToHome();
     }
   }
+
+  onKeyDownLanguage(event: KeyboardEvent): void {
+    if (event.key === 'Enter' || event.key === ' ') {
+      this.toggleSimpleLanguage();
+    }
+  }
+
 }

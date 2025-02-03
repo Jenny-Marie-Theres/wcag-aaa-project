@@ -16,6 +16,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import { SourcesComponent } from './sources/sources.component';
 import { VideoplayerComponent } from './videoplayer/videoplayer.component';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
+import { EvaluationComponent } from './evaluation/evaluation.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.componen
     TextToSpeechComponent,
     SourcesComponent,
     VideoplayerComponent,
-    ThemeSwitcherComponent
+    ThemeSwitcherComponent,
+    EvaluationComponent
   ],
   imports: [
     BrowserModule,

@@ -8,18 +8,18 @@
   <!-- Mitte: Vorlesefunktion & Einfache Sprache -->
   <div class="middle-section">
     <div class="tts-container">
-      <span class="tts-label" aria-live="polite">Vorlesefunktion:</span>
+      <span class="tts-label" aria-live="polite">{{ isSimpleLanguage ? 'Lies den Text vor' : 'Vorlesefunktion:' }}</span>
       <app-text-to-speech></app-text-to-speech>
     </div>
-    <div class="easy-language" role="button" tabindex="0">
+    <div class="easy-language" role="button" tabindex="0" (click)="toggleSimpleLanguage()" (keydown)="onKeyDownLanguage($event)">
       <mat-icon>translate</mat-icon>
-      <span>Einfache Sprache</span>
+      <span>{{ isSimpleLanguage ? 'Reguläre Sprache' : 'Einfache Sprache' }}</span>
     </div>
   </div>
 
 
   <div class="theme-switcher">
-    <span class="tts-label" aria-live="polite">Farbanpassung:</span>
+    <span class="tts-label" aria-live="polite">{{ isSimpleLanguage ? 'Farben ändern' : 'Farbanpassung:' }}</span>
     <app-theme-switcher></app-theme-switcher>
   </div>
 </div>
