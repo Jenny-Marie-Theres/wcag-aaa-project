@@ -10,30 +10,38 @@
   color: white;
   font-weight: 700;
   font-size: 1.5rem;
-  padding: 0 1rem;
-  justify-content: space-between; /* Platz zwischen den Elementen */
+  font-family: 'Arial', sans-serif;
+  padding: 0 1.5rem;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-.clickable-area {
+
+.clickable-area, .easy-language, .tts-container, .theme-switcher {
   display: flex;
   align-items: center;
-  padding: 8px 12px;
+  gap: 12px;
+  padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  outline: none;
-
-  &:hover {
-    background-color: var(--highlight-color);
-    color: var(--text-color);
-  }
-
-  &:focus {
-    outline: 3px solid black;
-    background-color: var(--highlight-color);
-    color: var(--text-color);
-  }
+  font-size: 1.5rem;
+  font-family: inherit;
 }
+
+
+
+.clickable-area:hover, .easy-language:hover {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+}
+
+.clickable-area:focus, .easy-language:focus {
+  outline: 3px solid black;
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+}
+
 
 mat-icon {
   font-size: 2rem;
@@ -45,18 +53,15 @@ mat-icon {
 }
 
 
-.tts-container {
-  margin-left: auto;
-}
-.tts-container {
+.middle-section {
   display: flex;
   align-items: center;
-  margin-left: auto;
-  gap: 10px;
+  gap: 60px;
 }
 
 .tts-label {
-  font-size: 1.5rem;
+  font-size: inherit;
   color: white;
-  margin-right: 10px;
 }
+
+

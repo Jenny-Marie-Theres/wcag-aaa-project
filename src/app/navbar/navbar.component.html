@@ -1,12 +1,25 @@
 <div class="toolbar" role="banner">
+  <!-- Linke Seite: Home Button -->
   <div class="clickable-area" role="button" (click)="navigateToHome()" (keydown)="onKeyDown($event)" tabindex="0">
     <mat-icon>accessibility_new</mat-icon>
-    <div class="spacer"></div>
     <span>Fortgeschrittene-Mensch-Computer-Interaktion</span>
   </div>
-  <app-theme-switcher></app-theme-switcher>
-  <div class="tts-container">
-    <span class="tts-label" aria-live="polite">Steuerelemente zum Vorlesen der Seite:</span>
-    <app-text-to-speech></app-text-to-speech>
+
+  <!-- Mitte: Vorlesefunktion & Einfache Sprache -->
+  <div class="middle-section">
+    <div class="tts-container">
+      <span class="tts-label" aria-live="polite">Vorlesefunktion:</span>
+      <app-text-to-speech></app-text-to-speech>
+    </div>
+    <div class="easy-language" role="button" tabindex="0">
+      <mat-icon>translate</mat-icon>
+      <span>Einfache Sprache</span>
+    </div>
+  </div>
+
+
+  <div class="theme-switcher">
+    <span class="tts-label" aria-live="polite">Farbanpassung:</span>
+    <app-theme-switcher></app-theme-switcher>
   </div>
 </div>
