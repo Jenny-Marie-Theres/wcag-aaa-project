@@ -3,7 +3,6 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333;
   padding: 10px;
   z-index: 1000;
   color: white;
@@ -31,8 +30,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #ffeb3b;
-  color: black;
+  background-color: var(--hightlight-color);
+  color: var(--text-color);
 }
 
 .sidenav-container {

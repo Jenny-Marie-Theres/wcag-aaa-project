@@ -2,3 +2,45 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Default theme */
+:root {
+  --primary-color: #0d47a1;
+  --secondary-color: #616161;
+  --highlight-color: yellow;
+  --background-color: white;
+  --text-color: black;
+}
+
+/* Protanopia (red-blind) theme */
+.protanopia {
+  --primary-color: #0d47a1; /* Blue */
+  --secondary-color: #6c757d; 
+  --highlight-color: #ff8c00;/* Orange */
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Deuteranopia (green-blind) theme */
+.deuteranopia {
+  --primary-color: #0d47a1; /* Blue */
+  --secondary-color: #ff4500; /* Red-Orange */
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Tritanopia (blue-blind) theme */
+.tritanopia {
+  --primary-color: #ff4500; /* Red-Orange */
+  --secondary-color: #008000; /* Green */
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* High-contrast theme */
+.high-contrast {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
