@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 
 /* Default theme */
 :root {
@@ -10,6 +9,33 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --highlight-color: yellow;
   --background-color: white;
   --text-color: black;
+  --font-size: 18px; //18px standart
+  --line-height: 1.6; //1.6 standart
+  --letter-spacing: 0; //0 standart
+  --word-spacing: 0; //0 standart
+}
+
+.content {
+  letter-spacing: var(--letter-spacing);;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  word-spacing: var(--word-spacing);
+  overflow-x: hidden;
+}
+
+body.large-text {
+  font-size: 200%;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* Protanopia (red-blind) theme */
@@ -33,14 +59,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .tritanopia {
   --primary-color: #ff4500; /* Red-Orange */
   --secondary-color: #008000; /* Green */
-  --background-color: #ffffff;
-  --text-color: #000000;
-}
-
-/* High-contrast theme */
-.high-contrast {
-  --primary-color: #000000;
-  --secondary-color: #ffffff;
   --background-color: #ffffff;
   --text-color: #000000;
 }

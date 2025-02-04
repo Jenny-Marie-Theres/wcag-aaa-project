@@ -24,7 +24,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: var(--font-size);
   display: block;
   padding: 10px;
 }
@@ -56,8 +56,8 @@ mat-sidenav-container {
   display: flex;
   margin-left: 250px;
   padding: 30px;
-  font-size: 18px;
-  line-height: 1.6;  // Erhöht den Zeilenabstand für besseren Lesekomfort
+  font-size: var(--font-size);
+  line-height: var(--line-height);  // Erhöht den Zeilenabstand für besseren Lesekomfort
 }
 
 main {

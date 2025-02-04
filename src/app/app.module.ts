@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { VideoplayerComponent } from './videoplayer/videoplayer.component';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import {MatTableModule} from "@angular/material/table";
+import { AccessibilityOptionsComponent } from './accessibility-options/accessibility-options.component';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import {MatTableModule} from "@angular/material/table";
     SourcesComponent,
     VideoplayerComponent,
     ThemeSwitcherComponent,
-    EvaluationComponent
+    EvaluationComponent,
+    AccessibilityOptionsComponent
   ],
     imports: [
         BrowserModule,
@@ -42,6 +45,7 @@ import {MatTableModule} from "@angular/material/table";
         MatButtonModule,
         MatMenuModule,
         MatTableModule,
+        FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
