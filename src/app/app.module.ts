@@ -17,6 +17,7 @@ import { SourcesComponent } from './sources/sources.component';
 import { VideoplayerComponent } from './videoplayer/videoplayer.component';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
+import {MatTableModule} from "@angular/material/table";
 
 
 @NgModule({
@@ -32,15 +33,16 @@ import { EvaluationComponent } from './evaluation/evaluation.component';
     ThemeSwitcherComponent,
     EvaluationComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatIconModule,
-    BrowserAnimationsModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatMenuModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatIconModule,
+        BrowserAnimationsModule,
+        MatSidenavModule,
+        MatButtonModule,
+        MatMenuModule,
+        MatTableModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
