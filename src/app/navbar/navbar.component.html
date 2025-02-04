@@ -2,7 +2,7 @@
   <!-- Linke Seite: Home Button -->
   <div class="clickable-area" role="button" (click)="navigateToHome()" (keydown)="onKeyDown($event)" tabindex="0">
     <mat-icon>accessibility_new</mat-icon>
-    <span>Fortgeschrittene-Mensch-Computer-Interaktion</span>
+    <span>Fortg. MCI</span>
   </div>
 
   <!-- Mitte: Vorlesefunktion & Einfache Sprache -->
@@ -17,9 +17,28 @@
     </div>
   </div>
 
+  <!-- Rechte Seite: Theme Switcher und Accessibility Options -->
+  <div class="right-section">
+    <div class="theme-switcher">
+      <span class="tts-label" aria-live="polite">{{ isSimpleLanguage ? 'Farben ändern' : 'Farbanpassung:' }}</span>
+      <app-theme-switcher></app-theme-switcher>
+    </div>
 
-  <div class="theme-switcher">
-    <span class="tts-label" aria-live="polite">{{ isSimpleLanguage ? 'Farben ändern' : 'Farbanpassung:' }}</span>
-    <app-theme-switcher></app-theme-switcher>
+    <!-- Neuer Accessibility Options Button -->
+    <div class="accessibility-toggle" 
+         role="button" 
+         tabindex="0"
+         (click)="toggleAccessibilityOptions()"
+         (keydown.enter)="toggleAccessibilityOptions()"
+         [attr.aria-expanded]="showAccessibilityOptions"
+         aria-label="Zugänglichkeitsoptionen">
+      <mat-icon>settings</mat-icon>
+      <span>{{ isSimpleLanguage ? 'Einstellungen' : 'Anpassungen' }}</span>
+    </div>
   </div>
+</div>
+
+<!-- Accessibility Options Dropdown -->
+<div class="accessibility-dropdown" *ngIf="showAccessibilityOptions">
+  <app-accessibility-options></app-accessibility-options>
 </div>

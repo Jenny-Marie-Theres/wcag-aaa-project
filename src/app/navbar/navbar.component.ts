@@ -33,5 +33,11 @@ export class NavbarComponent {
       this.toggleSimpleLanguage();
     }
   }
+  showAccessibilityOptions = false;
+
+  toggleAccessibilityOptions(): void {
+    this.showAccessibilityOptions = !this.showAccessibilityOptions;
+  }
+
 
 }

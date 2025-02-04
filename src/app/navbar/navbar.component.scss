@@ -64,4 +64,44 @@ mat-icon {
   color: white;
 }
 
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.accessibility-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
+  background-color: var(--primary-color);
+
+  &:hover {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+  }
+
+  mat-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.accessibility-dropdown {
+  position: absolute;
+  right: 20px;
+  top: 70px; // Abhängig von der Höhe der Navbar
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  min-width: 300px;
+}
+
 
