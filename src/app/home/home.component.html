@@ -16,17 +16,19 @@
             Projektarbeit
           </h1>
 
-          <p *ngIf="!simpleLanguage">Diese Webseite wurde im Rahmen einer Projektarbeit zur barrierefreien Webentwicklung erstellt. Sie erfüllt die höchsten Anforderungen der Web Content Accessibility Guidelines (WCAG) und erreicht die AAA-Konformitätsstufe.</p>
+          <p *ngIf="!simpleLanguage">Diese Webseite wurde im Rahmen einer Projektarbeit zur barrierefreien Webentwicklung erstellt. Sie soll möglichst die höchsten Anforderungen der Web Content Accessibility Guidelines (WCAG) erfüllt und soll so die AAA-Konformitätsstufe erfüllen.</p>
           <p *ngIf="simpleLanguage">Diese Webseite ist Teil einer Projektarbeit. Sie wurde so gemacht, dass alle Menschen sie gut benutzen können.</p>
 
-          <p *ngIf="!simpleLanguage">Die Webseite besteht aus drei Hauptbereichen:</p>
-          <p *ngIf="simpleLanguage">Die Webseite hat drei Teile:</p>
+          <p *ngIf="!simpleLanguage">Die Webseite besteht aus vier Hauptbereichen:</p>
+          <p *ngIf="simpleLanguage">Die Webseite hat vier Teile:</p>
 
           <ul>
             <li *ngIf="!simpleLanguage">Die Startseite gibt eine Übersicht über die Funktionen und Merkmale der Webseite.</li>
             <li *ngIf="simpleLanguage">Die Startseite zeigt, was die Webseite kann.</li>
             <li *ngIf="!simpleLanguage">Die Seite "Informationen über WCAG" vermittelt grundlegendes Wissen über die WCAG-Richtlinien und illustriert diese mit Bildern und Videos.</li>
             <li *ngIf="simpleLanguage">Auf der Seite "Informationen über WCAG" wird erklärt, was die WCAG-Richtlinien sind.</li>
+            <li *ngIf="!simpleLanguage">Die Seite "Evaluierung" bewertet diese Website anhand der WCAG-Richtlinien und zeigt, welche Kriterien erfüllt sind.</li>
+            <li *ngIf="simpleLanguage">Auf der Seite "Bewerten" steht, was die Internetseite gut macht und was besser werden kann.</li>
             <li *ngIf="!simpleLanguage">Die Seite "Quellen und Technologien" dokumentiert die verwendeten Frameworks und Technologien sowie die Quellen, aus denen die präsentierten Informationen stammen.</li>
             <li *ngIf="simpleLanguage">Auf der Seite "Quellen und Technologien" wird erklärt, welche Programme und Quellen verwendet wurden.</li>
           </ul>
@@ -71,11 +73,6 @@
           </ul>
         </section>
 
-        <section aria-labelledby="Einbindung-von-Medien">
-          <h2 id="Einbindung-von-Medien" tabindex="0">Einbindung von Medien</h2>
-          <p *ngIf="!simpleLanguage">Die Webseite integriert Bilder und Videos, um visuelle und auditive Inhalte für verschiedene Nutzergruppen zugänglich zu machen. Dabei wird darauf geachtet, dass sämtliche Medien barrierefrei sind, beispielsweise durch Alternativtexte und Untertitel.</p>
-          <p *ngIf="simpleLanguage">Die Webseite zeigt Bilder und Videos. Alle Bilder haben Texte, die erklären, was sie zeigen. Und Videos haben Untertitel.</p>
-        </section>
       </article>
     </main>
   </div>

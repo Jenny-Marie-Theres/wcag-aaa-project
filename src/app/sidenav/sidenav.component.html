@@ -1,6 +1,22 @@
 <ul>
-  <li><a [routerLink]="''" title="Zur Startseite" tabindex="0">{{ simpleLanguage ? 'Startseite' : 'Home' }}</a></li>
-  <li><a [routerLink]="'/video'" title="Mehr über WCAG erfahren" tabindex="0">{{ simpleLanguage ? 'Mehr über WCAG' : 'Informationen über WCAG' }}</a></li>
-  <li><a [routerLink]="'/evaluierung'" title="Bewertung" tabindex="0">{{ simpleLanguage ? 'Bewertung' : 'Evaluierung' }}</a></li>
-  <li><a [routerLink]="'/quellen'" title="Informationen zu Quellen und Technologien" tabindex="0">{{ simpleLanguage ? 'Quellen und Technologien' : 'Quellen und Technologien' }}</a></li>
+  <li [routerLinkActive]="'selected-router'" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="''" title="Zur Startseite" tabindex="0">
+      {{ simpleLanguage ? 'Startseite' : 'Home' }}
+    </a>
+  </li>
+  <li [routerLinkActive]="'selected-router'" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="'/video'" title="Mehr über WCAG erfahren" tabindex="0">
+      {{ simpleLanguage ? 'Mehr über WCAG' : 'Informationen über WCAG' }}
+    </a>
+  </li>
+  <li [routerLinkActive]="'selected-router'" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="'/evaluierung'" title="Bewertung" tabindex="0">
+      {{ simpleLanguage ? 'Bewertung' : 'Evaluierung' }}
+    </a>
+  </li>
+  <li [routerLinkActive]="'selected-router'" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="'/quellen'" title="Informationen zu Quellen und Technologien" tabindex="0">
+      {{ simpleLanguage ? 'Quellen und Technologien' : 'Quellen und Technologien' }}
+    </a>
+  </li>
 </ul>

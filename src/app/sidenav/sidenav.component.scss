@@ -21,3 +21,9 @@ ul li a:hover {
   background-color: var(--highlight-color);
   color: var(--text-color);
 }
+.selected-router {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 0;
+}
