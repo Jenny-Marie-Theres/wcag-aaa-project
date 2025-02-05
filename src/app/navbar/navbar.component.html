@@ -1,8 +1,8 @@
 <div class="toolbar" role="banner">
   <!-- Linke Seite: Home Button -->
-  <div class="clickable-area" role="button" (click)="navigateToHome()" (keydown)="onKeyDown($event)" tabindex="0">
+  <div class="clickable-area" role="button" (click)="navigateToHome()" (keydown)="onKeyDown($event)" tabindex="0" aria-label="Zur Startseite">
     <mat-icon>accessibility_new</mat-icon>
-    <span>Fortg. MCI</span>
+    <span>Fortgeschrittene MCI</span>
   </div>
 
   <!-- Mitte: Vorlesefunktion & Einfache Sprache -->
@@ -25,8 +25,8 @@
     </div>
 
     <!-- Neuer Accessibility Options Button -->
-    <div class="accessibility-toggle" 
-         role="button" 
+    <div class="accessibility-toggle"
+         role="button"
          tabindex="0"
          (click)="toggleAccessibilityOptions()"
          (keydown.enter)="toggleAccessibilityOptions()"
