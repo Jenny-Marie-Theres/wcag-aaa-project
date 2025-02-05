@@ -1,31 +1,40 @@
 <app-navbar></app-navbar>
 
 <mat-sidenav-container class="sidenav-container">
-  <!-- Sidebar -->
   <mat-sidenav #sidenav mode="side" opened="true" class="sidenav" role="navigation">
     <app-sidenav></app-sidenav>
   </mat-sidenav>
-  <!-- Hauptinhalt -->
+
   <div class="content">
     <main>
       <article id="intro">
         <section aria-labelledby="Quellen-und-Technologien">
           <h1 id="Quellen-und-Technologien">Quellen und Technologien</h1>
-          <p>Diese Seite beleuchtet die Technologien, die bei der Entwicklung dieser Webseite verwendet wurden, sowie die Quellen, aus denen die verwendeten Informationen stammen.</p>
+          <p *ngIf="!simpleLanguage">Diese Seite beleuchtet die Technologien, die bei der Entwicklung dieser Webseite verwendet wurden, sowie die Quellen, aus denen die verwendeten Informationen stammen.</p>
+          <p *ngIf="simpleLanguage">Hier steht, welche Programme für die Webseite benutzt wurden und woher die Informationen kommen.</p>
         </section>
 
         <section aria-labelledby="Technologien">
           <h2 id="Technologien">Technologien</h2>
-          <p>Die Webseite wurde unter Verwendung des Angular-Frameworks entwickelt. Um die Benutzeroberfläche ansprechend und funktional zu gestalten, wurde Angular Material eingesetzt, ein UI-Komponenten-Toolkit, das vorgefertigte Elemente zur Verfügung stellt. Für die Implementierung der Text-to-Speech-Funktionalität wurde eine Kombination aus Angular und einer Text-to-Speech-API verwendet, die es ermöglicht, Text in gesprochene Sprache umzuwandeln und damit die Zugänglichkeit der Webseite für Menschen mit unterschiedlichen Bedürfnissen zu verbessern.</p>
+          <p *ngIf="!simpleLanguage">Bei der Erstellung dieser Webseite wurden verschiedene Technologien und Frameworks verwendet, um eine barrierefreie Nutzung zu ermöglichen.</p>
+          <p *ngIf="simpleLanguage">Für diese Webseite wurden bestimmte Programme benutzt, damit alle Menschen sie gut nutzen können.</p>
+          <ul>
+            <li>Angular - ein Framework für Webseiten</li>
+            <li>Material Design - für das Layout und die Bedienung</li>
+            <li>PWA-Technologie - für eine bessere Nutzung auf mobilen Geräten</li>
+          </ul>
         </section>
 
         <section aria-labelledby="Quellen">
           <h2 id="Quellen">Quellen</h2>
-          <p></p>
+          <p *ngIf="!simpleLanguage">Die Informationen auf dieser Webseite basieren auf verschiedenen vertrauenswürdigen Quellen:</p>
+          <p *ngIf="simpleLanguage">Die Informationen auf dieser Seite kommen aus sicheren Quellen:</p>
           <ul>
             <li><a href="https://angular.io" target="_blank">Angular - Offizielle Website (Öffnet in neuem Tab)</a></li>
             <li><a href="https://material.angular.io" target="_blank">Angular Material - UI-Komponenten (Öffnet in neuem Tab)</a></li>
+            <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">Web Content Accessibility Guidelines (WCAG) international standard (Öffnet in neuem Tab)</a></li>
             <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG 2.1 - Web Content Accessibility Guidelines (Öffnet in neuem Tab)</a></li>
+            <li><a href="https://davidmathlogic.com/colorblind" target="_blank">Coloring for Colorblindness (Öffnet in neuem Tab)</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Web Speech API - Speech Synthesis (Öffnet in neuem Tab)</a></li>
           </ul>
         </section>

@@ -41,8 +41,8 @@ body.large-text {
 /* Protanopia (red-blind) theme */
 .protanopia {
   --primary-color: #0d47a1; /* Blue */
-  --secondary-color: #6c757d; 
-  --highlight-color: #ff8c00;/* Orange */
+  --secondary-color: #616161; 
+  --highlight-color: rgb(214, 214, 3);
   --background-color: #ffffff;
   --text-color: #000000;
 }
@@ -51,14 +51,16 @@ body.large-text {
 .deuteranopia {
   --primary-color: #0d47a1; /* Blue */
   --secondary-color: #ff4500; /* Red-Orange */
+  --highlight-color: #ff8c00;
   --background-color: #ffffff;
   --text-color: #000000;
 }
 
 /* Tritanopia (blue-blind) theme */
 .tritanopia {
-  --primary-color: #ff4500; /* Red-Orange */
+  --primary-color: #ff0000; /* Red */
   --secondary-color: #008000; /* Green */
+  --highlight-color: #ff8c00;
   --background-color: #ffffff;
   --text-color: #000000;
 }
