@@ -98,6 +98,8 @@ table {
   th, td {
     padding: 15px;
     font-size: var(--font-size);
+    letter-spacing: var(--letter-spacing);
+    line-height: var(--line-height);
     text-align: left;
     border: 1px solid var(--border-color);
   }
