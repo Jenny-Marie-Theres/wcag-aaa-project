@@ -9,9 +9,9 @@ export class TextToSpeechService {
   isSpeaking = false;
 
   constructor() {
-    this.utterance.lang = 'de-DE'; // Standard: Deutsch
-    this.utterance.rate = 1; // Sprechgeschwindigkeit
-    this.utterance.pitch = 1; // Stimmlage
+    this.utterance.lang = 'de-DE';
+    this.utterance.rate = 1;
+    this.utterance.pitch = 1;
   }
 
   /**
@@ -33,7 +33,7 @@ export class TextToSpeechService {
     this.isSpeaking = false;
   }
   setSpeed(speed: number): void {
-    this.utterance.rate = speed; // Ändert die Geschwindigkeit
+    this.utterance.rate = speed;
   }
   /**
    * Holt den sichtbaren Text aus der Navigation und dem Hauptinhalt
@@ -53,7 +53,7 @@ export class TextToSpeechService {
       text += 'Seiten Navigation: ' + this.getTextWithHeadings(sidenav) + '\n';
     }
 
-    // Hauptinhalt einlesen
+
     const main = document.querySelector('main');
     if (main) {
       text += 'Hauptinhalt: ' + this.getTextWithHeadings(main);
