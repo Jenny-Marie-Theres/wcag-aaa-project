@@ -53,11 +53,11 @@ export class EvaluationComponent implements OnInit {
       simpleAssessment: 'Dieses Kriterium ist für diese Webseite nicht wichtig.'
     },
     {
-      criteria: '1.2.5 Audio Description (Prerecorded) Level AA',
+      criteria: '1.2.5 Audio Description (Prerecorded) Level AAA',
       notes: 'Erfordert, dass vorab aufgezeichnete Videos eine Audio-Beschreibung bieten, wenn visuelle Informationen für das Verständnis wichtig sind.',
-      assessment: 'Wir haben es folgendermaßen umgesetzt: Vorab aufgezeichnete Videos wurden mit Audio-Beschreibungen ergänzt, wenn visuelle Informationen wichtig sind.',
+      assessment: 'Dieses Kriterium wurde nicht umgesetzt, da es für das Video nicht notwendig war',
       simpleNotes: 'Vorab aufgezeichnete Videos brauchen zusätzliche Beschreibungen.',
-      simpleAssessment: 'Alle wichtigen Videos haben jetzt Audio-Beschreibungen.'
+      simpleAssessment: 'Dieses Kriterium haben wir nicht gemacht'
     },
     {
       criteria: '1.2.6 Sign Language (Prerecorded) Level AAA',
@@ -69,9 +69,9 @@ export class EvaluationComponent implements OnInit {
     {
       criteria: '1.2.7 Extended Audio Description (Prerecorded) Level AAA',
       notes: 'Erfordert, dass Videos für Benutzer, die eine detailliertere Audio-Beschreibung benötigen, eine erweiterte Version der Audio-Beschreibung bieten.',
-      assessment: 'Wir haben es folgendermaßen umgesetzt: Erweiterte Audio-Beschreibungen wurden für Videos mit komplexen visuellen Inhalten hinzugefügt.',
+      assessment: 'Dieses Kriterium wurde nicht umgesetzt, da es für das Video nicht notwendig war',
       simpleNotes: 'Für komplexe Videos müssen längere Beschreibungen gemacht werden.',
-      simpleAssessment: 'Komplexe Videos haben jetzt erweiterte Beschreibungen.'
+      simpleAssessment: 'Dieses Kriterium haben wir nicht gemacht'
     },
     {
       criteria: '1.2.8 Media Alternative (Prerecorded) Level AAA',
